@@ -1,0 +1,70 @@
+search in pacman
+
+pacman project berkeley
+fer exercicis 1-6, 7 i 8 opcionals
+
+search.py
+search_agent.py
+
+entregar aquest dos fitxers
+
+
+dfs
+tenim una pila amb tots els nodes
+
+
+bfs
+tenim una cua
+- a, es el goal => treiem solucio, no, expandim (B,C)
+- agafem b, avaluem i expandim (E,F),
+- agafem c, avaluem i expandim
+
+(....)
+
+bfs i dfs nomes canvia el  tipus de estructura de dades que utilitza
+while(!Stack.empty())
+
+blind search: dfs, bfs
+heuristic search ( aproximacio al cost d'una operacio): 
+
+
+uniform cost(dijkstra) -> funcio d'avaluacio f(n)=g(n)
+cost acumulat
+
+A*
+cost aproximat per a una solucio
+
+cua de prioritat
+balancejar els valor de la cua de prioritat en funcio de un criteri (funcio de avaluacio (f(n) = g(n)+h(n)  ))
+
+g(n) = cost acumulat fins arribar al estat actual
+h(n) = heuristica del estat
+
+s = (0+7) = 7
+expandim s
+sa = 1+6 = 7
+sb = 4+4 = 8
+
+expandim el fill de menor cost
+A
+
+sag = 13+0 = 13
+sac = 6+2 = 8
+sab= 3+4=7
+
+expandim sab
+sabc = 5+2= 7
+
+expandim sabc
+sabcg = 8+0= 8
+
+=======================================================================
+heuristica admisible es si el valor de la heuristica es menor o igual a la heuristica optima.. h<=h*
+
+heuristica optima es que el valor de la heuristica es igual al valor exacte de la heuristica per arriba al goal
+
+consistent heuristic => C(n,n') + h(n') <= h(n)
+
+
+primers 4 exercicis => modificar fitxer search.py
+altres *_search.py
